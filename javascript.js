@@ -13,6 +13,7 @@ function calculateTime() {
     const minutes = Math.floor((timeInSeconds % 3600) / 60);
     const seconds = Math.ceil(timeInSeconds % 60);
     
-    document.getElementById('result').innerHTML = `d:${days} h:${hours} m:${minutes} s:${seconds}`;
+    document.getElementById('result').innerHTML = `d:${String(days).padStart(2, '0')} h:${String(hours).padStart(2, '0')} m:${String(minutes).padStart(2, '0')} s:${String(seconds).padStart(2, '0')}`;
+    
   }
   
