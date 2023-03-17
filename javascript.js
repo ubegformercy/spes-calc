@@ -27,7 +27,7 @@ function calculateTokenTime() {
     var hours = Math.floor((timeInSeconds % (24 * 60 * 60)) / (60 * 60));
     var minutes = Math.floor((timeInSeconds % (60 * 60)) / 60);
 
-    document.getElementById("results").innerHTML = "d:" + padZero(days) + " h:" + padZero(hours) + " m:" + padZero(minutes);
+    document.getElementById("results").innerHTML = "days:" + padZero(days) + "  hours:" + padZero(hours) + "  minutes:" + padZero(minutes);
 }
 
 function padZero(num) {
