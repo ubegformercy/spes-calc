@@ -9,75 +9,80 @@
 <script src="javascript.js"></script>
 <link rel="stylesheet" type="text/css" href="styles.css">
 <body>
- 
-
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-<img src="https://i.ibb.co/fxxrc0n/SPES-Logo.png" alt="Super Power">
-
-<div style="display: flex; margin-top: 40px; justify-content: center; align-items: center;">
-  <a href="https://discord.gg/spes" target="_blank" style="margin-right: 10px;">
+  <img src="https://i.ibb.co/fxxrc0n/SPES-Logo.png" alt="Super Power">
+  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+  <div style="display: flex; margin-top: 40px; justify-content: center; align-items: center;">
+   <a href="https://discord.gg/spes" target="_blank" style="margin-right: 25px;">
     <i class="fab fa-discord fa-2x"></i>
   </a>
-  <a href="https://www.youtube.com/c/HyperDjano" target="_blank" style="margin-right: 10px;">
+  <a href="https://www.youtube.com/c/HyperDjano" target="_blank" style="margin-right: 20px;">
     <i class="fab fa-youtube fa-2x"></i>
   </a>
-  <a href="https://twitter.com/HyperDjano" target="_blank">
-    <i class="fab fa-twitter fa-2x"></i>
-  </a>
-</div>  
-          <h2>Power Time Calculator</h2>
-            <table border="1">
-              <tr>
-                <td>Desired Power:</td>
-                <td><input type="number" id="desiredPower"></td>
-                <td>Unit:</td>
-                <td><select id="desiredPowerUnit" class="unitSelecter"><option value="0">none</option><option value="1">K</option><option value="2">M</option><option value="3">B</option><option value="4">T</option><option value="5">Qd</option><option value="6">Qi</option><option value="7">Sx</option><option value="8">Sp</option><option value="9">Oc</option><option value="10">N</option><option value="11">Dc</option><option value="12">Ud</option><option value="13">Dd</option><option value="14">Td</option><option value="15">Qua</option><option value="16">Qui</option><option value="17">Sxd</option><option value="18">Spd</option><option value="19">Ocd</option><option value="20">Nod</option><option value="21">Vg</option><option value="22">UVg</option><option value="23">DVg</option><option value="24">TVg</option><option value="25">QaVg</option><option value="26">QiVg</option><option value="27">SxVg</option><option value="28">SpVg</option><option value="29">OcVg</option><option value="30">NVg</option><option value="31">Tgn</option><option value="32">UTg</option></select></td>
-              </tr>
-              <tr>
-            <td>Current Power:</td>
-            <td><input type="number" id="currentPower"></td>
-            <td>Unit:</td>
-            <td><select id="currentPowerUnit" class="unitSelecter"><option value="0">none</option><option value="1">K</option><option value="2">M</option><option value="3">B</option><option value="4">T</option><option value="5">Qd</option><option value="6">Qi</option><option value="7">Sx</option><option value="8">Sp</option><option value="9">Oc</option><option value="10">N</option><option value="11">Dc</option><option value="12">Ud</option><option value="13">Dd</option><option value="14">Td</option><option value="15">Qua</option><option value="16">Qui</option><option value="17">Sxd</option><option value="18">Spd</option><option value="19">Ocd</option><option value="20">Nod</option><option value="21">Vg</option><option value="22">UVg</option><option value="23">DVg</option><option value="24">TVg</option><option value="25">QaVg</option><option value="26">QiVg</option><option value="27">SxVg</option><option value="28">SpVg</option><option value="29">OcVg</option><option value="30">NVg</option><option value="31">Tgn</option><option value="32">UTg</option></select></td>
-          </tr>
-          <tr>
-            <td>Current Tick Rate:</td>
-            <td><input type="number" id="tickRate"></td>
-            <td>Unit:</td>
-            <td><select id="tickRateUnit" class="unitSelecter"><option value="0">none</option><option value="1">K</option><option value="2">M</option><option value="3">B</option><option value="4">T</option><option value="5">Qd</option><option value="6">Qi</option><option value="7">Sx</option><option value="8">Sp</option><option value="9">Oc</option><option value="10">N</option><option value="11">Dc</option><option value="12">Ud</option><option value="13">Dd</option><option value="14">Td</option><option value="15">Qua</option><option value="16">Qui</option><option value="17">Sxd</option><option value="18">Spd</option><option value="19">Ocd</option><option value="20">Nod</option><option value="21">Vg</option><option value="22">UVg</option><option value="23">DVg</option><option value="24">TVg</option><option value="25">QaVg</option><option value="26">QiVg</option><option value="27">SxVg</option><option value="28">SpVg</option><option value="29">OcVg</option><option value="30">NVg</option><option value="31">Tgn</option><option value="32">UTg</option></select></td>
-          </tr>
-          <tr>
-            <td> <button onclick="calculatePowerTime()">Calculate Time</button> </td>
-            <td colspan="4" id="result"></td>
-          </tr>    
-            </table> 
-            <br><br>
-            <h2>Token Time Calculator</h2>
-           <table>
-                  <tr>
-                      <td>Current Tokens:</td>
-                      <td><input type="number" id="current_tokens"></td>
-                      <td>Current Evolution:</td>
-                      <td>
-                          <select id="evolution">
-                              <option value="20">None</option>
-                              <option value="25">Wolf</option>
-                              <option value="30">Grizzly</option>
-                          </select>
-                      </td>
-                  </tr>
-                  <tr>
-                      <td>Desired Token Amount:</td>
-                      <td colspan="3"><input type="number" id="desired_tokens"></td>
-                  </tr>
-                  <tr>
-                      <td><button onclick="calculateTokenTime()">Calculate Time</button></td>
-                      <td colspan="3" id="results"></td>
-                  </tr>
+    <a href="https://twitter.com/HyperDjano" target="_blank" style="margin-right: 10px;">
+      <i class="fab fa-twitter fa-2x"></i>
+    </a>
+    <a href="https://www.roblox.com/games/12585099889/" target="_blank" style="margin-left: 10px;">
+      <img src="https://i.ibb.co/MV8dsFt/roblox-icon.png" alt="Roblox" style="width: 32px; height: 32px;">
+    </a>
+  </div>
+  
+  <h2>Power Time Calculator</h2>
+  ...
+  
+              <table border="1">
+                <tr>
+                  <td>Desired Power:</td>
+                  <td><input type="number" id="desiredPower"></td>
+                  <td>Unit:</td>
+                  <td><select id="desiredPowerUnit" class="unitSelecter"><option value="0">none</option><option value="1">K</option><option value="2">M</option><option value="3">B</option><option value="4">T</option><option value="5">Qd</option><option value="6">Qi</option><option value="7">Sx</option><option value="8">Sp</option><option value="9">Oc</option><option value="10">N</option><option value="11">Dc</option><option value="12">Ud</option><option value="13">Dd</option><option value="14">Td</option><option value="15">Qua</option><option value="16">Qui</option><option value="17">Sxd</option><option value="18">Spd</option><option value="19">Ocd</option><option value="20">Nod</option><option value="21">Vg</option><option value="22">UVg</option><option value="23">DVg</option><option value="24">TVg</option><option value="25">QaVg</option><option value="26">QiVg</option><option value="27">SxVg</option><option value="28">SpVg</option><option value="29">OcVg</option><option value="30">NVg</option><option value="31">Tgn</option><option value="32">UTg</option></select></td>
+                </tr>
+                <tr>
+              <td>Current Power:</td>
+              <td><input type="number" id="currentPower"></td>
+              <td>Unit:</td>
+              <td><select id="currentPowerUnit" class="unitSelecter"><option value="0">none</option><option value="1">K</option><option value="2">M</option><option value="3">B</option><option value="4">T</option><option value="5">Qd</option><option value="6">Qi</option><option value="7">Sx</option><option value="8">Sp</option><option value="9">Oc</option><option value="10">N</option><option value="11">Dc</option><option value="12">Ud</option><option value="13">Dd</option><option value="14">Td</option><option value="15">Qua</option><option value="16">Qui</option><option value="17">Sxd</option><option value="18">Spd</option><option value="19">Ocd</option><option value="20">Nod</option><option value="21">Vg</option><option value="22">UVg</option><option value="23">DVg</option><option value="24">TVg</option><option value="25">QaVg</option><option value="26">QiVg</option><option value="27">SxVg</option><option value="28">SpVg</option><option value="29">OcVg</option><option value="30">NVg</option><option value="31">Tgn</option><option value="32">UTg</option></select></td>
+            </tr>
+            <tr>
+              <td>Current Tick Rate:</td>
+              <td><input type="number" id="tickRate"></td>
+              <td>Unit:</td>
+              <td><select id="tickRateUnit" class="unitSelecter"><option value="0">none</option><option value="1">K</option><option value="2">M</option><option value="3">B</option><option value="4">T</option><option value="5">Qd</option><option value="6">Qi</option><option value="7">Sx</option><option value="8">Sp</option><option value="9">Oc</option><option value="10">N</option><option value="11">Dc</option><option value="12">Ud</option><option value="13">Dd</option><option value="14">Td</option><option value="15">Qua</option><option value="16">Qui</option><option value="17">Sxd</option><option value="18">Spd</option><option value="19">Ocd</option><option value="20">Nod</option><option value="21">Vg</option><option value="22">UVg</option><option value="23">DVg</option><option value="24">TVg</option><option value="25">QaVg</option><option value="26">QiVg</option><option value="27">SxVg</option><option value="28">SpVg</option><option value="29">OcVg</option><option value="30">NVg</option><option value="31">Tgn</option><option value="32">UTg</option></select></td>
+            </tr>
+            <tr>
+              <td> <button onclick="calculatePowerTime()">Calculate Time</button> </td>
+              <td colspan="4" id="result"></td>
+            </tr>    
               </table> 
-   <br>       
-   <div id="copyright">
-  &copy; <script>document.write(new Date().getFullYear())</script> Hyper Production. All rights reserved.
-
-</div>                             
+              <br><br>
+              <h2>Token Time Calculator</h2>
+             <table>
+                    <tr>
+                        <td>Current Tokens:</td>
+                        <td><input type="number" id="current_tokens"></td>
+                        <td>Current Evolution:</td>
+                        <td>
+                            <select id="evolution">
+                                <option value="20">None</option>
+                                <option value="25">Wolf</option>
+                                <option value="30">Grizzly</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Desired Token Amount:</td>
+                        <td colspan="3"><input type="number" id="desired_tokens"></td>
+                    </tr>
+                    <tr>
+                        <td><button onclick="calculateTokenTime()">Calculate Time</button></td>
+                        <td colspan="3" id="results"></td>
+                    </tr>
+                </table> 
+     <br>       
+     <div id="copyright">
+    &copy; <script>document.write(new Date().getFullYear())</script> Hyper Production. All rights reserved.
+  
+  </div>         
 </body>
 </html>
