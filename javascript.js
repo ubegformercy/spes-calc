@@ -13,7 +13,7 @@ function calculatePowerTime() {
     const minutes = Math.floor((timeInSeconds % 3600) / 60);
     const seconds = Math.ceil(timeInSeconds % 60);
     
-    document.getElementById('result').innerHTML = `d:${String(days).padStart(2, '0')} h:${String(hours).padStart(2, '0')} m:${String(minutes).padStart(2, '0')} s:${String(seconds).padStart(2, '0')}`;
+    document.getElementById('result').innerHTML = `${String(days).padStart(2, '0')} Days / ${String(hours).padStart(2, '0')} Hours / ${String(minutes).padStart(2, '0')} Minutes`;
     
   }
 
@@ -27,7 +27,7 @@ function calculateTokenTime() {
     var hours = Math.floor((timeInSeconds % (24 * 60 * 60)) / (60 * 60));
     var minutes = Math.floor((timeInSeconds % (60 * 60)) / 60);
 
-    document.getElementById("results").innerHTML = "days:" + padZero(days) + "  hours:" + padZero(hours) + "  minutes:" + padZero(minutes);
+    document.getElementById("results").innerHTML =  padZero(days) + "Days  /" + padZero(hours) + "Hours   /" + padZero(minutes) + "Minutes";
 }
 
 function padZero(num) {
