@@ -34,23 +34,32 @@ function padZero(num) {
     return (num < 10) ? "0" + num : num;
 }
 
-function calculate() {
-    // Get the values of the selected options
-    var multiplier = parseInt(document.getElementById("multiplier").value);
-    var strength = parseInt(document.getElementById("strength").value);
-    var evolve = parseInt(document.getElementById("evolve").value);
-    var rank = parseInt(document.getElementById("rank").value);
-  
-    // Calculate the results using the given formulas
-    var result1 = 1 * multiplier * strength * evolve * rank;
-    var result2 = 60 * multiplier * strength * evolve * rank;
-    var result3 = 3600 * multiplier * strength * evolve * rank;
-    var result4 = 86400 * multiplier * strength * evolve * rank;
-  
-    // Display the results in the HTML
-    document.getElementById("result1").innerHTML = result1.toLocaleString() + " Per Second";
-    document.getElementById("result2").innerHTML = result2.toLocaleString() + " Per Minute";
-    document.getElementById("result3").innerHTML = result3.toLocaleString() + " Per Hour";
-    document.getElementById("result4").innerHTML = result4.toLocaleString() + " Per Day";
+function formatNumber(num) {
+  var magnitudes = ["", "K", "M", "B", "T", "Qd", "Qn", "Sx", "Sp", "Oc", "N", "Dc", "Ud", "Dd", "Td", "Qua", "Qui", "Sxd"];
+  var magnitudeIndex = 0;
+  while (num >= 1000 && magnitudeIndex < magnitudes.length - 1) {
+    num /= 1000;
+    magnitudeIndex++;
   }
-  
+  return num.toFixed(2) + " " + magnitudes[magnitudeIndex];
+}
+
+function calculate() {
+  // Get the values of the selected options
+  var multiplier = parseInt(document.getElementById("multiplier").value);
+  var strength = parseInt(document.getElementById("strength").value);
+  var evolve = parseInt(document.getElementById("evolve").value);
+  var rank = parseInt(document.getElementById("rank").value);
+
+  // Calculate the results using the given formulas
+  var result1 = 1 * multiplier * strength * evolve * rank;
+  var result2 = 60 * multiplier * strength * evolve * rank;
+  var result3 = 3600 * multiplier * strength * evolve * rank;
+  var result4 = 86400 * multiplier * strength * evolve * rank;
+
+  // Format the results and display them in the HTML
+  document.getElementById("result1").innerHTML = formatNumber(result1) + " Per Second";
+  document.getElementById("result2").innerHTML = formatNumber(result2) + " Per Minute";
+  document.getElementById("result3").innerHTML = formatNumber(result3) + " Per Hour";
+  document.getElementById("result4").innerHTML = formatNumber(result4) + " Per Day";
+}
