@@ -1,5 +1,3 @@
-
-
 function calculatePowerTime() {
     const desiredPower = parseFloat(document.getElementById('desiredPower').value);
     const desiredPowerUnit = parseInt(document.getElementById('desiredPowerUnit').value);
