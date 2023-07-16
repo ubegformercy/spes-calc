@@ -58,7 +58,7 @@ function generateExponentialOptions() {
   }
 }
 
-generateExponentialOptions();
+
 
 function calculate() {
   var multiplier = parseInt(document.getElementById("multiplier").value);
@@ -99,3 +99,5 @@ function calculate() {
   document.getElementById("wispMulti").innerHTML = "Total Wisp Multiplier: " + wisp.toFixed(2);
   document.getElementById("boostMulti").innerHTML = "Boost Multiplier: " + boost.toFixed(2);
 }
+
+generateExponentialOptions();
