@@ -1,3 +1,5 @@
+
+
 function calculatePowerTime() {
     const desiredPower = parseFloat(document.getElementById('desiredPower').value);
     const desiredPowerUnit = parseInt(document.getElementById('desiredPowerUnit').value);
@@ -41,8 +43,24 @@ function formatNumber(num) {
     num /= 1000;
     magnitudeIndex++;
   }
-  return num.toFixed(2) + " " + magnitudes[magnitudeIndex];
+  var formattedNum = num.toFixed(2);
+  return (formattedNum % 1 === 0 ? num.toFixed(0) : formattedNum) + " " + magnitudes[magnitudeIndex];
 }
+
+
+function generateExponentialOptions() {
+  var select = document.getElementById("multiplier");
+  var exponent = 1;
+  for (var i = 1; i <= 40; i++) {
+    exponent *= 2;
+    var option = document.createElement("option");
+    option.value = exponent;
+    option.text = formatNumber(exponent);
+    select.appendChild(option);
+  }
+}
+
+generateExponentialOptions();
 
 function calculate() {
   var multiplier = parseInt(document.getElementById("multiplier").value);
