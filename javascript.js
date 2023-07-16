@@ -47,19 +47,31 @@ function formatNumber(num) {
 function calculate() {
   // Get the values of the selected options
   var multiplier = parseInt(document.getElementById("multiplier").value);
-  var strength = parseInt(document.getElementById("strength").value);
+  var zone = parseInt(document.getElementById("zone").value);
   var evolve = parseInt(document.getElementById("evolve").value);
   var rank = parseInt(document.getElementById("rank").value);
+  
 
+  var wisp1 = parseInt(document.getElementById("wisp1").value);
+  var wisp2 = parseInt(document.getElementById("wisp2").value);
+  var wisp3 = parseInt(document.getElementById("wisp3").value);
+var boost = parseInt(document.getElementById("boost").value);
+  var wisp = wisp1 + wisp2 + wisp3
+  if (wisp <= 0) {
+    wisp = 1;
+}
+  
   // Calculate the results using the given formulas
-  var result1 = 1 * multiplier * strength * evolve * rank;
-  var result2 = 60 * multiplier * strength * evolve * rank;
-  var result3 = 3600 * multiplier * strength * evolve * rank;
-  var result4 = 86400 * multiplier * strength * evolve * rank;
+  var result1 = 1 * multiplier * zone * rank * evolve *  wisp * boost;
+  var result2 = 60 * multiplier * zone * rank * evolve *  wisp * boost;
+  var result3 = 3600 * multiplier * zone * rank * evolve *  wisp * boost;
+  var result4 = 86400 * multiplier * zone * rank * evolve *  wisp * boost;
+  var result5 = 604800 * multiplier * zone * rank * evolve *  wisp * boost;
 
   // Format the results and display them in the HTML
   document.getElementById("result1").innerHTML = formatNumber(result1) + " Per Second";
   document.getElementById("result2").innerHTML = formatNumber(result2) + " Per Minute";
   document.getElementById("result3").innerHTML = formatNumber(result3) + " Per Hour";
   document.getElementById("result4").innerHTML = formatNumber(result4) + " Per Day";
+  document.getElementById("result5").innerHTML = formatNumber(result5) + " Per Week"; // For the new per week result
 }
