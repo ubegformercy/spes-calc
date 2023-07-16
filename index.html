@@ -9,202 +9,411 @@
 <script src="javascript.js"></script>
 <link rel="stylesheet" type="text/css" href="styles.css">
 <body>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-  <img src="https://i.ibb.co/fxxrc0n/SPES-Logo.png" alt="Super Power">
-  
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-  <div style="display: flex; margin-top: 40px; justify-content: center; align-items: center;">
-   <a href="https://discord.gg/spes" target="_blank" style="margin-right: 25px;">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<img src="https://i.ibb.co/fxxrc0n/SPES-Logo.png" alt="Super Power">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+<div style="display: flex; margin-top: 40px; justify-content: center; align-items: center;">
+  <a href="https://discord.gg/spes" target="_blank" style="margin-right: 25px;">
     <i class="fab fa-discord fa-2x"></i>
   </a>
   <a href="https://www.youtube.com/c/HyperDjano" target="_blank" style="margin-right: 20px;">
     <i class="fab fa-youtube fa-2x"></i>
   </a>
-    <a href="https://twitter.com/HyperDjano" target="_blank" style="margin-right: 10px;">
-      <i class="fab fa-twitter fa-2x"></i>
-    </a>
-    <a href="https://www.roblox.com/games/12585099889/" target="_blank" style="margin-left: 10px;">
-      <img src="https://i.ibb.co/MV8dsFt/roblox-icon.png" alt="Roblox" style="width: 32px; height: 32px;">
-    </a>
-     <a href="https://super-power-evolution-simulator.fandom.com/wiki/Super_Power_Evolution_Simulator_Wiki" target="_blank" style="margin-left: 0px;">
-      <img src="https://i.ibb.co/4Z03FXN/fandom.png" alt="Fandom" style="width: 75px; height: 75px;">
-    </a>
-  </div>
-  
-  <h2>Power Time Calculator</h2>
-              <table border="1">
-                <tr>
-                  <td>Desired Power:</td>
-                  <td><input type="number" id="desiredPower"></td>
-                  <td>Unit:</td>
-                  <td><select id="desiredPowerUnit" class="unitSelecter"><option value="0">none</option><option value="1">K</option><option value="2">M</option><option value="3">B</option><option value="4">T</option><option value="5">Qd</option><option value="6">Qn</option><option value="7">Sx</option><option value="8">Sp</option><option value="9">Oc</option><option value="10">N</option><option value="11">Dc</option><option value="12">Ud</option><option value="13">Dd</option><option value="14">Td</option><option value="15">Qua</option><option value="16">Qui</option><option value="17">Sxd</option><option value="18">Spd</option><option value="19">Ocd</option><option value="20">Nod</option><option value="21">Vg</option><option value="22">UVg</option><option value="23">DVg</option><option value="24">TVg</option><option value="25">QaVg</option><option value="26">QnVg</option><option value="27">SxVg</option><option value="28">SpVg</option><option value="29">OcVg</option><option value="30">NVg</option><option value="31">Tgn</option><option value="32">UTg</option></select></td>
-                </tr>
-                <tr>
-              <td>Current Power:</td>
-              <td><input type="number" id="currentPower"></td>
-              <td>Unit:</td>
-              <td><select id="currentPowerUnit" class="unitSelecter"><option value="0">none</option><option value="1">K</option><option value="2">M</option><option value="3">B</option><option value="4">T</option><option value="5">Qd</option><option value="6">Qn</option><option value="7">Sx</option><option value="8">Sp</option><option value="9">Oc</option><option value="10">N</option><option value="11">Dc</option><option value="12">Ud</option><option value="13">Dd</option><option value="14">Td</option><option value="15">Qua</option><option value="16">Qui</option><option value="17">Sxd</option><option value="18">Spd</option><option value="19">Ocd</option><option value="20">Nod</option><option value="21">Vg</option><option value="22">UVg</option><option value="23">DVg</option><option value="24">TVg</option><option value="25">QaVg</option><option value="26">QiVg</option><option value="27">SxVg</option><option value="28">SpVg</option><option value="29">OcVg</option><option value="30">NVg</option><option value="31">Tgn</option><option value="32">UTg</option></select></td>
-            </tr>
-            <tr>
-              <td>Current Tick Rate:</td>
-              <td><input type="number" id="tickRate"></td>
-              <td>Unit:</td>
-              <td><select id="tickRateUnit" class="unitSelecter"><option value="0">none</option><option value="1">K</option><option value="2">M</option><option value="3">B</option><option value="4">T</option><option value="5">Qd</option><option value="6">Qn</option><option value="7">Sx</option><option value="8">Sp</option><option value="9">Oc</option><option value="10">N</option><option value="11">Dc</option><option value="12">Ud</option><option value="13">Dd</option><option value="14">Td</option><option value="15">Qua</option><option value="16">Qui</option><option value="17">Sxd</option><option value="18">Spd</option><option value="19">Ocd</option><option value="20">Nod</option><option value="21">Vg</option><option value="22">UVg</option><option value="23">DVg</option><option value="24">TVg</option><option value="25">QaVg</option><option value="26">QiVg</option><option value="27">SxVg</option><option value="28">SpVg</option><option value="29">OcVg</option><option value="30">NVg</option><option value="31">Tgn</option><option value="32">UTg</option></select></td>
-            </tr>
-            <tr>
-              <td> <button onclick="calculatePowerTime()">Calculate Time</button> </td>
-              <td colspan="4" id="result"></td>
-            </tr>    
-              </table> 
-  <br>
-  <table name="disclaimer">
-    <tr>
-      <td>
+  <a href="https://twitter.com/HyperDjano" target="_blank" style="margin-right: 10px;">
+    <i class="fab fa-twitter fa-2x"></i>
+  </a>
+  <a href="https://www.roblox.com/games/12585099889/" target="_blank" style="margin-left: 10px;">
+    <img src="https://i.ibb.co/MV8dsFt/roblox-icon.png" alt="Roblox" style="width: 32px; height: 32px;">
+  </a>
+  <a href="https://super-power-evolution-simulator.fandom.com/wiki/Super_Power_Evolution_Simulator_Wiki" target="_blank" style="margin-left: 0px;">
+    <img src="https://i.ibb.co/4Z03FXN/fandom.png" alt="Fandom" style="width: 75px; height: 75px;">
+  </a>
+</div>
+
+<h2>Power Time Calculator</h2>
+<table border="1">
+  <tr>
+    <td>Desired Power:</td>
+    <td><input type="number" id="desiredPower"></td>
+    <td>Unit:</td>
+    <td><select id="desiredPowerUnit" class="unitSelecter"><option value="0">none</option><option value="1">K</option><option value="2">M</option><option value="3">B</option><option value="4">T</option><option value="5">Qd</option><option value="6">Qn</option><option value="7">Sx</option><option value="8">Sp</option><option value="9">Oc</option><option value="10">N</option><option value="11">Dc</option><option value="12">Ud</option><option value="13">Dd</option><option value="14">Td</option><option value="15">Qua</option><option value="16">Qui</option><option value="17">Sxd</option><option value="18">Spd</option><option value="19">Ocd</option><option value="20">Nod</option><option value="21">Vg</option><option value="22">UVg</option><option value="23">DVg</option><option value="24">TVg</option><option value="25">QaVg</option><option value="26">QnVg</option><option value="27">SxVg</option><option value="28">SpVg</option><option value="29">OcVg</option><option value="30">NVg</option><option value="31">Tgn</option><option value="32">UTg</option></select></td>
+  </tr>
+  <tr>
+    <td>Current Power:</td>
+    <td><input type="number" id="currentPower"></td>
+    <td>Unit:</td>
+    <td><select id="currentPowerUnit" class="unitSelecter"><option value="0">none</option><option value="1">K</option><option value="2">M</option><option value="3">B</option><option value="4">T</option><option value="5">Qd</option><option value="6">Qn</option><option value="7">Sx</option><option value="8">Sp</option><option value="9">Oc</option><option value="10">N</option><option value="11">Dc</option><option value="12">Ud</option><option value="13">Dd</option><option value="14">Td</option><option value="15">Qua</option><option value="16">Qui</option><option value="17">Sxd</option><option value="18">Spd</option><option value="19">Ocd</option><option value="20">Nod</option><option value="21">Vg</option><option value="22">UVg</option><option value="23">DVg</option><option value="24">TVg</option><option value="25">QaVg</option><option value="26">QiVg</option><option value="27">SxVg</option><option value="28">SpVg</option><option value="29">OcVg</option><option value="30">NVg</option><option value="31">Tgn</option><option value="32">UTg</option></select></td>
+  </tr>
+  <tr>
+    <td>Current Tick Rate:</td>
+    <td><input type="number" id="tickRate"></td>
+    <td>Unit:</td>
+    <td><select id="tickRateUnit" class="unitSelecter"><option value="0">none</option><option value="1">K</option><option value="2">M</option><option value="3">B</option><option value="4">T</option><option value="5">Qd</option><option value="6">Qn</option><option value="7">Sx</option><option value="8">Sp</option><option value="9">Oc</option><option value="10">N</option><option value="11">Dc</option><option value="12">Ud</option><option value="13">Dd</option><option value="14">Td</option><option value="15">Qua</option><option value="16">Qui</option><option value="17">Sxd</option><option value="18">Spd</option><option value="19">Ocd</option><option value="20">Nod</option><option value="21">Vg</option><option value="22">UVg</option><option value="23">DVg</option><option value="24">TVg</option><option value="25">QaVg</option><option value="26">QiVg</option><option value="27">SxVg</option><option value="28">SpVg</option><option value="29">OcVg</option><option value="30">NVg</option><option value="31">Tgn</option><option value="32">UTg</option></select></td>
+  </tr>
+  <tr>
+    <td><button onclick="calculatePowerTime()">Calculate Time</button></td>
+    <td colspan="4" id="result"></td>
+  </tr>
+</table>
+<br>
+<table name="disclaimer">
+  <tr>
+    <td>
       <p>Disclaimer:</p>
       <p>Please note that the calculations provided by this application are based on Java math functions, which are unable to accurately calculate large numbers with precision. Therefore, the results provided are estimates with a variance of +/- a few minutes.</p>
-      </td>
-    </tr>
-  </table>
-  
-              <br>
-              <h2>Token Time Calculator</h2>
-             <table>
-                    <tr>
-                        <td>Current Tokens:</td>
-                        <td><input type="number" id="current_tokens"></td>
-                        <td>Current Evolution:</td>
-                        <td>
-                            <select id="evolution">
-                                <option value="20">None</option>
-                                <option value="25">Wolf</option>
-                                <option value="30">Grizzly</option>
-                                <option value="35">Crocodile</option>
-                              <option value="45">Tiger</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Desired Token Amount:</td>
-                        <td colspan="3"><input type="number" id="desired_tokens"></td>
-                    </tr>
-                    <tr>
-                        <td><button onclick="calculateTokenTime()">Calculate Time</button></td>
-                        <td colspan="3" id="results"></td>
-                    </tr>
-                </table> 
-  <br>
-              <h2>Stats Calculator</h2>
-  <table>
-    <tr>
-      <td>Multi</td>
-      <td>Zone</td>
-      <td>Rank</td>
-      <td>Evolve</td>
-    </tr>
-    <tr>
-      <td>
-        <select id="multiplier">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="4">4</option>
-          <option value="8">8</option>
-          <option value="16">16</option>
-          <option value="32">32</option>
-          <option value="64">64</option>
-          <option value="128">128</option>
-          <option value="256">256</option>
-          <option value="512">512</option>
-          <option value="1024">1K</option>
-          <option value="2048">2K</option>
-          <option value="4096">4K</option>
-          <option value="8192">8K</option>
-          <option value="16384">16K</option>
-          <option value="32768">32K</option>
-          <option value="65536">64K</option>
-          <option value="131072">128K</option>
-          <option value="262144">256K</option>
-          <option value="524288">512K</option>
-          <option value="1048576">1M</option>
-          <option value="2097152">2M</option>
-          <option value="4194304">4M</option>
-          <option value="8388608">8M</option>
-          <option value="16777216">16M</option>
-          <option value="33554432">32M</option>
-          <option value="67108864">64M</option>
-          <option value="134217728">128M</option>
-          <option value="268435456">256M</option>
-          <option value="536870912">512M</option>
-        </select>
-      </td>
-      <td>
-        <select id="strength">
-          <option value="1">Nothing</option>
-          <option value="2">100</option>
-          <option value="5">1K</option>
-          <option value="25">10K</option>
-          <option value="150">100K</option>
-          <option value="400">5M</option>
-          <option value="1500">250M</option>
-          <option value="4000">4B</option>
-          <option value="20000">160B</option>
-          <option value="100000">13T</option>
-          <option value="300000">700T</option>
-          <option value="2000000">20Qd</option>
-          <option value="20000000">12Qn</option>
-          <option value="250000000">3Sx</option>
-          <option value="5000000000">1Sp</option>
-          <option value="100000000000">50Oc</option>
-          <option value="3000000000000">17N</option>
-          <option value="250000000000000">15Dc</option>
+    </td>
+  </tr>
+</table>
 
-        </select>
-      </td>
-      <td>
-        <select id="rank">
-          <option value="1">F-Class</option>
-          <option value="2">E-Class</option>
-          <option value="5">D-Class</option>
-          <option value="13">C-Class</option>
-          <option value="30">B-Class</option>
-          <option value="75">A-Class</option>
-          <option value="300">S-Class</option>
-          <option value="1000">SS-Class</option>
-          <option value="4000">SSS-Class</option>
-          <option value="20000">X-Class</option>
-          <option value="100000">Y-Class</option>
-          <option value="600000">Z-Class</option>
-          <option value="3000000">XYZ-Class</option>
-        </select>
-      </td>
-      <td>
-        <select id="evolve">
-          <option value="1">None</option>
-          <option value="5">Wolf</option>
-          <option value="25">Grizzly</option>
-          <option value="150">Crocodile</option>
-          <option value="1000">Tiger</option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td colspan="1" align="center">
-    <button type="button" onclick="calculate()">Calculate</button>
-      </td>
-      <td colspan="3"></td>
-    </tr>
-    <tr>
-      <td colspan="4" align="center">
+<br>
+<h2>Token Time Calculator</h2>
+<table>
+  <tr>
+    <td>Current Tokens:</td>
+    <td><input type="number" id="current_tokens"></td>
+    <td>Current Evolution:</td>
+    <td>
+      <select id="evolution">
+        <option value="20">None</option>
+        <option value="25">Wolf</option>
+        <option value="30">Grizzly</option>
+        <option value="35">Crocodile</option>
+        <option value="45">Tiger</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>Desired Token Amount:</td>
+    <td colspan="3"><input type="number" id="desired_tokens"></td>
+  </tr>
+  <tr>
+    <td><button onclick="calculateTokenTime()">Calculate Time</button></td>
+    <td colspan="3" id="results"></td>
+  </tr>
+</table>
+
+<br>
+<h2>Stats Calculator</h2>
+<table>
+  <tr>
+    <td>Multi</td>
+    <td>Zone</td>
+    <td>Rank</td>
+    <td>Evolve</td>
+  </tr>
+  <tr>
+    <td>
+      <select id="multiplier">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="4">4</option>
+        <option value="8">8</option>
+        <option value="16">16</option>
+        <option value="32">32</option>
+        <option value="64">64</option>
+        <option value="128">128</option>
+        <option value="256">256</option>
+        <option value="512">512</option>
+        <option value="1000">1K</option>
+        <option value="2000">2K</option>
+        <option value="4000">4K</option>
+        <option value="8100">8.1K</option>
+        <option value="16300">16.3K</option>
+        <option value="32700">32.7K</option>
+        <option value="65500">65.5K</option>
+        <option value="131000">131K</option>
+        <option value="262100">262.1K</option>
+        <option value="524200">524.2K</option>
+        <option value="1000000">1M</option>
+        <option value="2000000">2M</option>
+        <option value="4100000">4.1M</option>
+        <option value="8300000">8.3M</option>
+        <option value="16700000">16.7M</option>
+        <option value="33400000">33.4M</option>
+        <option value="67000000">67M</option>
+        <option value="134000000">134M</option>
+        <option value="268000000">268M</option>
+        <option value="536000000">536M</option>
+        <option value="1070000000">1.07B</option>
+        <option value="2140000000">2.14B</option>
+        <option value="4290000000">4.29B</option>
+        <option value="8580000000">8.58B</option>
+        <option value="17160000000">17.16B</option>
+        <option value="34320000000">34.32B</option>
+        <option value="68640000000">68.64B</option>
+        <option value="137400000000">137.4B</option>
+      </select>
+    </td>
+    <td>
+      <select id="zone">
+        <option value="1">Nothing</option>
+        <option value="2">100</option>
+        <option value="5">1K</option>
+        <option value="25">10K</option>
+        <option value="150">100K</option>
+        <option value="400">5M</option>
+        <option value="1500">250M</option>
+        <option value="4000">4B</option>
+        <option value="20000">160B</option>
+        <option value="100000">13T</option>
+        <option value="300000">700T</option>
+        <option value="2000000">20Qd</option>
+        <option value="20000000">12Qn</option>
+        <option value="250000000">3Sx</option>
+        <option value="5000000000">1Sp</option>
+        <option value="100000000000">50Oc</option>
+        <option value="3000000000000">17N</option>
+        <option value="250000000000000">15Dc</option>
+      </select>
+    </td>
+    <td>
+      <select id="rank">
+        <option value="1">F-Class</option>
+        <option value="2">E-Class</option>
+        <option value="5">D-Class</option>
+        <option value="13">C-Class</option>
+        <option value="30">B-Class</option>
+        <option value="75">A-Class</option>
+        <option value="300">S-Class</option>
+        <option value="1000">SS-Class</option>
+        <option value="4000">SSS-Class</option>
+        <option value="20000">X-Class</option>
+        <option value="100000">Y-Class</option>
+        <option value="600000">Z-Class</option>
+        <option value="3000000">XYZ-Class</option>
+      </select>
+    </td>
+    <td>
+      <select id="evolve">
+        <option value="1">None</option>
+        <option value="5">Wolf</option>
+        <option value="25">Grizzly</option>
+        <option value="150">Crocodile</option>
+        <option value="1000">Tiger</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td> </td>
+    <td>Wisp 1</td>
+    <td>Wisp 2</td>
+    <td>Wisp 3</td>
+  </tr>
+  <tr>
+    <td>
+    </td>
+    <td>
+      <select id="wisp1">
+  <option value="0">None</option>
+  <option value="1.1">Common (x1.1)</option>
+  <option value="1.3">Common ✰ (x1.3)</option>
+  <option value="1.2">Rare (x1.2)</option>
+  <option value="1.7">Rare ✰ (x1.7)</option>
+  <option value="3.2">Rare ✰ ✰ (x3.2)</option>
+  <option value="1.3">Profound (x1.3)</option>
+  <option value="2">Profound ✰ (x2)</option>
+  <option value="4.2">Profound ✰✰ (x4.2)</option>
+  <option value="11">Profound ✰✰✰ (x11)</option>
+  <option value="1.5">Exquisite (x1.5)</option>
+  <option value="2.8">Exquisite ✰ (x2.8)</option>
+  <option value="8">Exquisite ✰✰ (x8)</option>
+  <option value="22">Exquisite ✰✰✰ (x22)</option>
+  <option value="2">Divine (x2)</option>
+  <option value="4.5">Divine ✰ (x4.5)</option>
+  <option value="12">Divine ✰✰ (x12)</option>
+  <option value="45">Divine ✰✰✰ (x45)</option>
+  <option value="50">Void (x50)</option>
+  <option value="1.35">Quartz (x1.35)</option>
+  <option value="2.2">Quartz ✰ (x2.2)</option>
+  <option value="5">Quartz ✰✰ (x5)</option>
+  <option value="14.3">Quartz ✰✰✰ (x14.3)</option>
+  <option value="1.75">Jade (x1.75)</option>
+  <option value="3.3">Jade ✰ (x3.3)</option>
+  <option value="9.4">Jade ✰✰ (x9.4)</option>
+  <option value="28">Jade ✰✰✰ (x28)</option>
+  <option value="2.1">Topaz (x2.1)</option>
+  <option value="4.9">Topaz ✰ (x4.9)</option>
+  <option value="14">Topaz ✰✰ (x14)</option>
+  <option value="52">Topaz ✰✰✰ (x52)</option>
+  <option value="2.5">Lapis (x2.5)</option>
+  <option value="5.6">Lapis ✰ (x5.6)</option>
+  <option value="17">Lapis ✰✰ (x17)</option>
+  <option value="63">Lapis ✰✰✰ (x63)</option>
+  <option value="70">Ruby (x70)</option>
+  <option value="70">Emerald (x70)</option>
+  <option value="70">Sapphire (x70)</option>
+  <option value="1.25">1M Common (x1.25)</option>
+  <option value="1.6">1M Common ✰ (x1.6)</option>
+  <option value="1.4">1M Rare (x1.4)</option>
+  <option value="2.1">1M Rare ✰ (x2.1)</option>
+  <option value="1.7">1M Advanced (x1.7)</option>
+  <option value="2.5">1M Advanced ✰ (x2.5)</option>
+  <option value="5.4">1M Advanced ✰✰ (x5.4)</option>
+  <option value="2.1">1M Great (x2.1)</option>
+  <option value="4.5">1M Great ✰ (x4.5)</option>
+  <option value="12.6">1M Great ✰✰ (x12.6)</option>
+  <option value="2.6">1M Exquisite (x2.6)</option>
+  <option value="7.4">1M Exquisite ✰ (x7.4)</option>
+  <option value="20">1M Exquisite ✰✰ (x20)</option>
+  <option value="50">1M Exquisite ✰✰✰ (x50)</option>
+  <option value="3">1M Divine (x3)</option>
+  <option value="8.5">1M Divine ✰ (x8.5)</option>
+  <option value="24">1M Divine ✰✰ (x24)</option>
+  <option value="53">1M Divine ✰✰✰ (x53)</option>
+  <option value="60">1M Dark Matter (x60)</option>
+      </select>
+    </td>
+    <td>
+      <select id="wisp2">
+  <option value="0">None</option>
+  <option value="1.1">Common (x1.1)</option>
+  <option value="1.3">Common ✰ (x1.3)</option>
+  <option value="1.2">Rare (x1.2)</option>
+  <option value="1.7">Rare ✰ (x1.7)</option>
+  <option value="3.2">Rare ✰ ✰ (x3.2)</option>
+  <option value="1.3">Profound (x1.3)</option>
+  <option value="2">Profound ✰ (x2)</option>
+  <option value="4.2">Profound ✰✰ (x4.2)</option>
+  <option value="11">Profound ✰✰✰ (x11)</option>
+  <option value="1.5">Exquisite (x1.5)</option>
+  <option value="2.8">Exquisite ✰ (x2.8)</option>
+  <option value="8">Exquisite ✰✰ (x8)</option>
+  <option value="22">Exquisite ✰✰✰ (x22)</option>
+  <option value="2">Divine (x2)</option>
+  <option value="4.5">Divine ✰ (x4.5)</option>
+  <option value="12">Divine ✰✰ (x12)</option>
+  <option value="45">Divine ✰✰✰ (x45)</option>
+  <option value="50">Void (x50)</option>
+  <option value="1.35">Quartz (x1.35)</option>
+  <option value="2.2">Quartz ✰ (x2.2)</option>
+  <option value="5">Quartz ✰✰ (x5)</option>
+  <option value="14.3">Quartz ✰✰✰ (x14.3)</option>
+  <option value="1.75">Jade (x1.75)</option>
+  <option value="3.3">Jade ✰ (x3.3)</option>
+  <option value="9.4">Jade ✰✰ (x9.4)</option>
+  <option value="28">Jade ✰✰✰ (x28)</option>
+  <option value="2.1">Topaz (x2.1)</option>
+  <option value="4.9">Topaz ✰ (x4.9)</option>
+  <option value="14">Topaz ✰✰ (x14)</option>
+  <option value="52">Topaz ✰✰✰ (x52)</option>
+  <option value="2.5">Lapis (x2.5)</option>
+  <option value="5.6">Lapis ✰ (x5.6)</option>
+  <option value="17">Lapis ✰✰ (x17)</option>
+  <option value="63">Lapis ✰✰✰ (x63)</option>
+  <option value="70">Ruby (x70)</option>
+  <option value="70">Emerald (x70)</option>
+  <option value="70">Sapphire (x70)</option>
+  <option value="1.25">1M Common (x1.25)</option>
+  <option value="1.6">1M Common ✰ (x1.6)</option>
+  <option value="1.4">1M Rare (x1.4)</option>
+  <option value="2.1">1M Rare ✰ (x2.1)</option>
+  <option value="1.7">1M Advanced (x1.7)</option>
+  <option value="2.5">1M Advanced ✰ (x2.5)</option>
+  <option value="5.4">1M Advanced ✰✰ (x5.4)</option>
+  <option value="2.1">1M Great (x2.1)</option>
+  <option value="4.5">1M Great ✰ (x4.5)</option>
+  <option value="12.6">1M Great ✰✰ (x12.6)</option>
+  <option value="2.6">1M Exquisite (x2.6)</option>
+  <option value="7.4">1M Exquisite ✰ (x7.4)</option>
+  <option value="20">1M Exquisite ✰✰ (x20)</option>
+  <option value="50">1M Exquisite ✰✰✰ (x50)</option>
+  <option value="3">1M Divine (x3)</option>
+  <option value="8.5">1M Divine ✰ (x8.5)</option>
+  <option value="24">1M Divine ✰✰ (x24)</option>
+  <option value="53">1M Divine ✰✰✰ (x53)</option>
+  <option value="60">1M Dark Matter (x60)</option>
+      </select>
+    </td>
+    <td>
+      <select id="wisp3">
+  <option value="0">None</option>
+  <option value="1.1">Common (x1.1)</option>
+  <option value="1.3">Common ✰ (x1.3)</option>
+  <option value="1.2">Rare (x1.2)</option>
+  <option value="1.7">Rare ✰ (x1.7)</option>
+  <option value="3.2">Rare ✰ ✰ (x3.2)</option>
+  <option value="1.3">Profound (x1.3)</option>
+  <option value="2">Profound ✰ (x2)</option>
+  <option value="4.2">Profound ✰✰ (x4.2)</option>
+  <option value="11">Profound ✰✰✰ (x11)</option>
+  <option value="1.5">Exquisite (x1.5)</option>
+  <option value="2.8">Exquisite ✰ (x2.8)</option>
+  <option value="8">Exquisite ✰✰ (x8)</option>
+  <option value="22">Exquisite ✰✰✰ (x22)</option>
+  <option value="2">Divine (x2)</option>
+  <option value="4.5">Divine ✰ (x4.5)</option>
+  <option value="12">Divine ✰✰ (x12)</option>
+  <option value="45">Divine ✰✰✰ (x45)</option>
+  <option value="50">Void (x50)</option>
+  <option value="1.35">Quartz (x1.35)</option>
+  <option value="2.2">Quartz ✰ (x2.2)</option>
+  <option value="5">Quartz ✰✰ (x5)</option>
+  <option value="14.3">Quartz ✰✰✰ (x14.3)</option>
+  <option value="1.75">Jade (x1.75)</option>
+  <option value="3.3">Jade ✰ (x3.3)</option>
+  <option value="9.4">Jade ✰✰ (x9.4)</option>
+  <option value="28">Jade ✰✰✰ (x28)</option>
+  <option value="2.1">Topaz (x2.1)</option>
+  <option value="4.9">Topaz ✰ (x4.9)</option>
+  <option value="14">Topaz ✰✰ (x14)</option>
+  <option value="52">Topaz ✰✰✰ (x52)</option>
+  <option value="2.5">Lapis (x2.5)</option>
+  <option value="5.6">Lapis ✰ (x5.6)</option>
+  <option value="17">Lapis ✰✰ (x17)</option>
+  <option value="63">Lapis ✰✰✰ (x63)</option>
+  <option value="70">Ruby (x70)</option>
+  <option value="70">Emerald (x70)</option>
+  <option value="70">Sapphire (x70)</option>
+  <option value="1.25">1M Common (x1.25)</option>
+  <option value="1.6">1M Common ✰ (x1.6)</option>
+  <option value="1.4">1M Rare (x1.4)</option>
+  <option value="2.1">1M Rare ✰ (x2.1)</option>
+  <option value="1.7">1M Advanced (x1.7)</option>
+  <option value="2.5">1M Advanced ✰ (x2.5)</option>
+  <option value="5.4">1M Advanced ✰✰ (x5.4)</option>
+  <option value="2.1">1M Great (x2.1)</option>
+  <option value="4.5">1M Great ✰ (x4.5)</option>
+  <option value="12.6">1M Great ✰✰ (x12.6)</option>
+  <option value="2.6">1M Exquisite (x2.6)</option>
+  <option value="7.4">1M Exquisite ✰ (x7.4)</option>
+  <option value="20">1M Exquisite ✰✰ (x20)</option>
+  <option value="50">1M Exquisite ✰✰✰ (x50)</option>
+  <option value="3">1M Divine (x3)</option>
+  <option value="8.5">1M Divine ✰ (x8.5)</option>
+  <option value="24">1M Divine ✰✰ (x24)</option>
+  <option value="53">1M Divine ✰✰✰ (x53)</option>
+  <option value="60">1M Dark Matter (x60)</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="1" align="center">
+      <button type="button" onclick="calculate()">Calculate</button>
+    </td>
+    <td>
+      <select id="boost">
+        <option value="1">😞 None</option>
+        <option value="1.5">⚡x1.5</option>
+        <option value="2">⚡x2</option>
+      </select>
+    </td>
+    <td colspan="2"></td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center">
       <p id="result1"></p>
       <p id="result2"></p>
       <p id="result3"></p>
       <p id="result4"></p>
-      </td>
-    </tr>
-  </table>
-     <br>       
-     <div id="copyright">
-    &copy; <script>document.write(new Date().getFullYear())</script> Hyper Production. All rights reserved.
-  
-  </div>           
+      <p id="result5"></p>
+    </td>
+  </tr>
+</table>
+<br>
+<div id="copyright">
+  &copy; <script>document.write(new Date().getFullYear())</script> Hyper Production. All rights reserved.
+</div>
+         
 </body>
 </html>
