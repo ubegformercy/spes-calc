@@ -162,14 +162,13 @@
     </td>
   </tr>
   <tr>
-    <td> </td>
+
     <td>Wisp 1</td>
     <td>Wisp 2</td>
     <td>Wisp 3</td>
+    <td>Wisp 4</td>
   </tr>
   <tr>
-    <td>
-    </td>
     <td>
       <select id="wisp1">
   <option value="1">None</option>
@@ -228,7 +227,7 @@
   <option value="8.5">1M Divine ✰ (x8.5)</option>
   <option value="24">1M Divine ✰✰ (x24)</option>
   <option value="53">1M Divine ✰✰✰ (x53)</option>
-  <option value="60">1M Dark Matter (x60)</option>
+  <option value="60">1M Dark Matter (x65)</option>
       </select>
     </td>
     <td>
@@ -353,6 +352,67 @@
   <option value="60">1M Dark Matter (x60)</option>
       </select>
     </td>
+        <td>
+          <select id="wisp4">
+  <option value="1">None</option>
+  <option value="1.1">Common (x1.1)</option>
+  <option value="1.3">Common ✰ (x1.3)</option>
+  <option value="1.2">Rare (x1.2)</option>
+  <option value="1.7">Rare ✰ (x1.7)</option>
+  <option value="3.2">Rare ✰ ✰ (x3.2)</option>
+  <option value="1.3">Profound (x1.3)</option>
+  <option value="2">Profound ✰ (x2)</option>
+  <option value="4.2">Profound ✰✰ (x4.2)</option>
+  <option value="11">Profound ✰✰✰ (x11)</option>
+  <option value="1.5">Exquisite (x1.5)</option>
+  <option value="2.8">Exquisite ✰ (x2.8)</option>
+  <option value="8">Exquisite ✰✰ (x8)</option>
+  <option value="22">Exquisite ✰✰✰ (x22)</option>
+  <option value="2">Divine (x2)</option>
+  <option value="4.5">Divine ✰ (x4.5)</option>
+  <option value="12">Divine ✰✰ (x12)</option>
+  <option value="45">Divine ✰✰✰ (x45)</option>
+  <option value="50">Void (x50)</option>
+  <option value="1.35">Quartz (x1.35)</option>
+  <option value="2.2">Quartz ✰ (x2.2)</option>
+  <option value="5">Quartz ✰✰ (x5)</option>
+  <option value="14.3">Quartz ✰✰✰ (x14.3)</option>
+  <option value="1.75">Jade (x1.75)</option>
+  <option value="3.3">Jade ✰ (x3.3)</option>
+  <option value="9.4">Jade ✰✰ (x9.4)</option>
+  <option value="28">Jade ✰✰✰ (x28)</option>
+  <option value="2.1">Topaz (x2.1)</option>
+  <option value="4.9">Topaz ✰ (x4.9)</option>
+  <option value="14">Topaz ✰✰ (x14)</option>
+  <option value="52">Topaz ✰✰✰ (x52)</option>
+  <option value="2.5">Lapis (x2.5)</option>
+  <option value="5.6">Lapis ✰ (x5.6)</option>
+  <option value="17">Lapis ✰✰ (x17)</option>
+  <option value="63">Lapis ✰✰✰ (x63)</option>
+  <option value="70">Ruby (x70)</option>
+  <option value="70">Emerald (x70)</option>
+  <option value="70">Sapphire (x70)</option>
+  <option value="1.25">1M Common (x1.25)</option>
+  <option value="1.6">1M Common ✰ (x1.6)</option>
+  <option value="1.4">1M Rare (x1.4)</option>
+  <option value="2.1">1M Rare ✰ (x2.1)</option>
+  <option value="1.7">1M Advanced (x1.7)</option>
+  <option value="2.5">1M Advanced ✰ (x2.5)</option>
+  <option value="5.4">1M Advanced ✰✰ (x5.4)</option>
+  <option value="2.1">1M Great (x2.1)</option>
+  <option value="4.5">1M Great ✰ (x4.5)</option>
+  <option value="12.6">1M Great ✰✰ (x12.6)</option>
+  <option value="2.6">1M Exquisite (x2.6)</option>
+  <option value="7.4">1M Exquisite ✰ (x7.4)</option>
+  <option value="20">1M Exquisite ✰✰ (x20)</option>
+  <option value="50">1M Exquisite ✰✰✰ (x50)</option>
+  <option value="3">1M Divine (x3)</option>
+  <option value="8.5">1M Divine ✰ (x8.5)</option>
+  <option value="24">1M Divine ✰✰ (x24)</option>
+  <option value="53">1M Divine ✰✰✰ (x53)</option>
+  <option value="60">1M Dark Matter (x60)</option>
+      </select>
+    </td>
   </tr>
   <tr>
     <td colspan="1" align="center">
@@ -365,10 +425,11 @@
         <option value="2">⚡x2</option>
       </select>
     </td>
-    <td colspan="2"></td>
+    <td colspan="2" style="text-align: left;">Stats Upgrades: <input type="number" id="upgrades" style="width: 100px;"></td>
+
   </tr>
   <tr>
-  <td colspan="2" align="left">
+  <td colspan="2">
     <p id="baseMulti"></p>
     <p id="zoneMulti"></p>
     <p id="rankMulti"></p>
