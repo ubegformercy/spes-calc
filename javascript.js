@@ -1,3 +1,5 @@
+
+
 function calculatePowerTime() {
     const desiredPower = parseFloat(document.getElementById('desiredPower').value);
     const desiredPowerUnit = parseInt(document.getElementById('desiredPowerUnit').value);
@@ -68,19 +70,21 @@ function calculate() {
   var wisp1 = parseFloat(document.getElementById("wisp1").value);
   var wisp2 = parseFloat(document.getElementById("wisp2").value);
   var wisp3 = parseFloat(document.getElementById("wisp3").value);
+  var wisp4 = parseFloat(document.getElementById("wisp4").value);
   var boost = parseFloat(document.getElementById("boost").value);
+  var upgrades = parseFloat(document.getElementById("upgrades").value);
 
-  var wisp = (wisp1-1) + (wisp2-1) + (wisp3-1);
+  var wisp = (wisp1-1) + (wisp2-1) + (wisp3-1)+ (wisp4-1);
 
   if (wisp <= 1) {
     wisp = 1 + wisp;
   }
 
-  var result1 = 1 * multiplier * zone * rank * evolve * wisp * boost;
-  var result2 = 60 * multiplier * zone * rank * evolve * wisp * boost;
-  var result3 = 3600 * multiplier * zone * rank * evolve * wisp * boost;
-  var result4 = 86400 * multiplier * zone * rank * evolve * wisp * boost;
-  var result5 = 604800 * multiplier * zone * rank * evolve * wisp * boost;
+  var result1 = 1 * multiplier * zone * rank * evolve * wisp * boost * upgrades;
+  var result2 = 60 * multiplier * zone * rank * evolve * wisp * boost * upgrades;
+  var result3 = 3600 * multiplier * zone * rank * evolve * wisp * boost * upgrades;
+  var result4 = 86400 * multiplier * zone * rank * evolve * wisp * boost * upgrades;
+  var result5 = 604800 * multiplier * zone * rank * evolve * wisp * boost * upgrades;
 
   document.getElementById("result1").innerHTML = formatNumber(result1) + " Per Second";
   document.getElementById("result2").innerHTML = formatNumber(result2) + " Per Minute";
